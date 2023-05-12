@@ -162,7 +162,7 @@ COPY ports.conf /etc/apache2/ports.conf
 COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 # Granting rwX permissions to all users to allow the startup script to make configuration changes when running as a non-root user
-RUN chmod -R a+rwX /usr/src/nextcloud/ /etc/apache2/
+RUN chmod -R a+rwX /usr/src/nextcloud/ /etc/apache2/ /var/lib/apache2/
 
 EXPOSE 8080/tcp 8443/tcp
 
